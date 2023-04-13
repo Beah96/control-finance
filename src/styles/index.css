@@ -1,1 +1,182 @@
-/* Desenvolva a estilização da sua página aqui */
+@import url(globalStyles.css);
+
+/*Header*/
+.logo__header{
+    height: 6.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: var(--color-grey-5);
+    margin-bottom: 30px;
+}
+.logo__div{
+    width: 43rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.logo__title{
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+    color: var(--color-grey-1);
+}
+.logo__title > span{
+    color: var(--color-brand-1);
+
+}
+.openModal__button{
+    background-color: var(--color-brand-1);
+    border: none;
+    color: var(--color-mode);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-1);
+    height: 2rem;
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    border-radius: 5px;
+}
+.openModal__button:hover{
+    background-color: var(--color-brand-2);
+    cursor: pointer;
+}
+
+/*Nav*/
+
+.filter__nav{
+    width: 43rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+   
+}
+
+.summary__title{
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+    color: var(--color-grey-1);
+}
+
+.buttons__div{
+    display: flex;
+    flex-direction: row;
+    gap:0.8rem;
+}
+
+.filter__button{
+    color: var(--color-grey-3);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-3);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    background-color: var(--color-mode);
+    border: 2px solid var(--color-grey-4);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filter__button:hover, .filter__button:active {
+    color: var(--color-brand-1);
+    border-color: var(--color-brand-1);
+    background-color: rgba(213, 189, 245, 0.99);
+}
+
+
+/*Main*/
+
+#app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.total__section{
+    height: 3rem;
+    width: 43rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-grey-5);
+    border-color: var(--color-grey-4);
+    padding: 0.875rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.75rem;
+
+}
+.total__title, .total__p {
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+}
+
+
+/*Cards Section*/
+
+.cards__ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.cards__li{
+    width: 43rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--color-grey-4);
+    padding: 0.875rem 1rem;
+    border-radius: 5px;
+
+}
+
+.value__p{
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+}
+
+.item__div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.category__p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-2);
+    background-color: var(--color-grey-5);
+    color: var(--color-grey-2);
+    width: 4.25rem;
+    height: 1.625rem;
+    border-radius: 5px;
+}
+
+.item__button{
+    background-color: var(--color-grey-5);
+    border-color: var(--color-grey-4);
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.item__button>img{
+    width: 1.3rem;
+    height: 1.5rem;
+}
+
+.item__button:hover{
+    border: 2px solid var(--color-grey-3)
+}
+
+

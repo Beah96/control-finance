@@ -16,11 +16,76 @@
     />
     <link rel="stylesheet" href="./src/styles/globalStyles.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/modal.css" />
   </head>
   <body>
-    <main id="app"></main>
-    <script src="./src/scripts/modal.js"></script>
-    <script src="./src/scripts/valuesData.js"></script>
-    <script src="./src/scripts/index.js"></script>
+    <header class="logo__header">
+      <div class="logo__div">
+        <h1 class="logo__title"><span>Control</span>Finance</h1>
+        <button class="openModal__button" id="showModal">Registre seu valor</button>
+      </div>
+    </header>
+
+    
+    <main id="app">
+      
+      <nav class="filter__nav">
+        <h2 class="summary__title">Resumo Financeiro</h2>
+        <div class="buttons__div">
+          <button class="filter__button" id="allFilter">Todos</button>
+          <button class="filter__button" id="enteriesFilter">Entradas</button>
+          <button class="filter__button" id="debitsFilter">Saidas</button>
+        </div>
+      </nav>
+
+      <section class="total__section">
+        <h4 class="total__title">Soma dos Valores</h4>
+        <p class="total__p"></p>
+      </section>
+
+      <section class="cards__section">
+      </section>
+    </main>
+
+
+    <script type="module" src="./src/scripts/modal.js"></script>
+    <script type="module" src="./src/scripts/valuesData.js"></script>
+    <script type="module" src="./src/scripts/index.js"></script>
+    <script type="module" src="./src/scripts/buttons.js"></script>
   </body>
+
+  <dialog>
+    <div class="dialog__div">
+      <div class="modal__div">
+        <h3 class="modal__title">Registro de Valor</h3>
+        <button id="closeModal">X</button>
+      </div>
+  
+      <p class="modal__p">Digite o valor e, em seguida, aperte o botão referente ao tipo de valor</p>
+  
+      <div class="inputValue__div">
+        <label class="value__label" for="value">Valor</label>
+      <input class="value__input" name="value" type="number" id="value" placeholder="R$ 00.00">
+      </div>
+  
+      <div class="inputCategory__div">
+        <span class="inputCategory__span">Tipo de valor</span>
+  
+        <span class="inputRadio__span">
+          <input class="radio__input" type="radio" name="category" id="enteries">
+          <label for="enteries">Entrada</label>
+        </span>
+  
+        <span class="inputRadio__span">
+          <input class="radio__input" type="radio" name="category" id="debits">
+          <label for="debits">Saída</label>
+        </span>
+      </div>
+  
+      <div class="modal__buttons">
+        <button id="cancel">Cancelar</button>
+        <button class="insertValue__button">Inserir Valor</button>
+      </div>
+    </div>
+  </dialog>
 </html>
