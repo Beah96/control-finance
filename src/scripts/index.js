@@ -2,6 +2,7 @@ import { insertedValues } from "./valuesData.js";
 
 export const cardSection = document.querySelector(".cards__section")
 const total = document.querySelector(".total__p")
+const modalBox = document.querySelector("dialog")
 
 export function createItem(array){
     let cardsList = document.createElement("ul")
@@ -39,6 +40,9 @@ export function createItem(array){
         array.splice(index)
         totalValue-= element.value
         total.innerText = `R$${totalValue}`
+        if(cardsList.children.length === 0){
+            emptyListMessage(cardsList,"Nenhum valor cadastrado" )
+        }
     })
 
     itemDiv.append(itemCategory, itemButton)
@@ -55,6 +59,23 @@ export function createItem(array){
     cardSection.appendChild(cardsList)
 
     return cardSection
+}
+
+export function emptyListMessage(list, string){
+    let emptyList = document.createElement("div")
+    emptyList.classList.add("empty__div")
+    let emptyTitle = document.createElement("h1")
+    emptyTitle.classList.add("empty__title")
+    emptyTitle.innerText= string
+    let emptyButton = document.createElement("button")
+    emptyButton.innerText= "Registrar novo valor"
+    emptyButton.classList.add("empty__button")
+    emptyList.addEventListener("click", (ev)=>{
+        modalBox.showModal()
+    })
+    emptyList.appendChild(emptyTitle)
+    emptyList.appendChild(emptyButton)
+    list.appendChild(emptyList)
 }
 
 

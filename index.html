@@ -65,7 +65,7 @@
   
       <div class="inputValue__div">
         <label class="value__label" for="value">Valor</label>
-      <input class="value__input" name="value" type="number" id="value" placeholder="R$ 00.00">
+      <input class="value__input" name="value" type="number"  onkeydown="javascript: return event.keyCode == 69 ? false : true" id="value" placeholder="R$ 00.00">
       </div>
   
       <div class="inputCategory__div">

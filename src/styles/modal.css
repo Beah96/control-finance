@@ -1,11 +1,11 @@
 @import url(globalStyles.css);
 
 dialog{
-    width: 428px;
-    height: 350px;
+    width:fit-content;
+    height: fit-content;
     position: absolute;
     top:100px;
-    left:500px;
+    left:5%;
     border: none;
     border-radius: 10px;
 }
@@ -46,7 +46,7 @@ dialog::backdrop{
 }
 
 .modal__p{
-    width: 380px;
+    width: 90%;
     font-size: var(--font-size-3);
     font-weight: var(--font-weight-3);
     color: var(--color-grey-1);
@@ -112,4 +112,13 @@ dialog::backdrop{
 }
 .inputRadio__span{
     margin:auto 10px;
+}
+
+@media only screen and (min-width: 700px){
+    dialog{
+        width: 428px;
+        height: 350px;
+        top:100px;
+        left:500px;
+    }
 }
